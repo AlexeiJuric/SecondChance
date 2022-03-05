@@ -1,69 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,100;1,200;1,300&family=Source+Sans+Pro&display=swap');
+@import "nav";
+$color:#DDC6A4;
+$colores:(#333,#666,#888,#aaa,#e8e8e8);
 body { 
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #e8e8e8;
+    background-color: (nth($colores,5));
     text-decoration: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
 }
-.container-all{
-    position: relative;
-    right: 0px;
-    transition: all 300ms;
-}
-header{
-    width: 100%;
-    height: 100px;
-    font-family: 'Poppins', sans-serif;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 100;
-    transition: all 300ms;  
-}
-.move_content{
-    right: 350px;   
-}
-.container-header{
-    max-width: 1200px;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-    padding: 0px 20px;
-    
-}
-.container-nav{
-    position: relative;
-    height: 100%;
-    margin-bottom: 40px;
-}
-nav{
-    height: 100%;
-}
-nav ul{
-    height: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-nav ul li a{
-    color:#323335;
-    font-size: 14px;
-    text-decoration: none;
-}
-nav ul li{
-    margin: 0px 20px;
-    list-style: none;   
-}
 .select{
-    background-color:#DDC6A4;
+    background-color:$color;
     padding: 10px 30px;
-    color:#323335;
+    color:#2d2e2f;
     border-radius: 20px;
 }
 .btn-menu{
@@ -80,7 +32,7 @@ nav ul li{
     display: none; 
 }
 .btn-menu:hover{
-    background-color:#DDC6A4;
+    background-color:$color;
 }
 .cover{
     width: 100%;
@@ -108,7 +60,7 @@ nav ul li{
     font-size: 18px;
     font-weight: 600;
     border: none;
-    background: radial-gradient(#d4c8bb,#d8c2a2);
+    background: radial-gradient($color,#d8c2a2);
     color:#323335;
     border-radius: 20px;
     box-shadow: 1px 1px 30px -5px #6a6b70;
@@ -255,7 +207,7 @@ header .logo{
     background: ghostwhite;  
 }
 h1 {
-    color: #DDC6A4;
+    color: $color;
     margin-left: 25px;
     margin-top: 70px;
 }
@@ -297,7 +249,7 @@ p{
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: hsl(36, 46%, 75%,0.6);
+    background-color: #d4c8bb;
     transition: all 500ms ease-out;
     opacity: 0; 
     visibility: hidden;
@@ -357,7 +309,7 @@ p{
     text-align: center;
 }
 .menu li a:hover{
-    background-color:#DDC6A4; 
+    background-color:$color; 
 }
 #seccioncontacto {
     background-color: gainsboro;   
@@ -392,7 +344,7 @@ video {
     width: 250px;
 }
 .pie-pagina .grupo-1 .box h2{
-    color:#DDC6A4;
+    color:$color;
     margin-bottom: 25px;
     font-size: 20px;
 }
@@ -448,7 +400,7 @@ video {
     padding: 10px;
     border-radius: 20px;
     margin-bottom: 10px;
-    border: 1px solid #DDC6A4;
+    border: 1px solid $color;
     color: ghostwhite; 
     
 }
@@ -462,21 +414,33 @@ video {
     color:ghostwhite;
     text-decoration: underline;
 }
-.form-registro .boton{ 
+.boton{ 
     width: 100%;
-    background-color:#DDC6A4 ;
+    background-color:$color ;
     border: none;
     padding: 12px;
     margin: 8px 0;
     font-size: 16px;
 }
+.boton--gris{
+    width: 100%;
+    background-color:#2B2B2B;
+    border: none;
+    color:ghostwhite;
+    padding: 12px;
+    margin: 8px 0;
+    font-size: 16px;    
+}
 .form-registro h4{
     font-size: 20px;
 }
-.form-registro .boton:hover{
+.boton:hover{
     background-color:#2B2B2B;
 
-    }
+}
+.boton--gris:hover{
+    background-color:$color;
+}
 .fondo-contacto{
     background-image: url(fondos/pc.jpg);
 }
@@ -574,7 +538,7 @@ img{
 }
 .caja-contenedor .caja .user h3{
     margin: 5px;
-    color: #DDC6A4;
+    color: $color;
     font-size: 24px;
 }
 .caja-contenedor .caja .user .comentarios h4{
